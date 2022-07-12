@@ -6,45 +6,39 @@ import Player from "./Player.js";
 const Home = () => {
 	const [songs] = useState ([
 		{
-			title: "Withu",
-			artist: "BLVK",
+			title: "My Love",
+			artist: "Florence & The Machine",
 			img_src: "./img/pic5.jpg",
-			src: "https://soundcloud.com/yungmai/sleepy?in=yourparadis/sets/jazz-hip&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+			src: "./music/song-1.mp3"
 		},
 		{
-			title: "A Glimmer Of Light",
-			artist: "MasterClass",
+			title: "Plastic Beach",
+			artist: "Gorillaz",
 			img_src: "./img/pic6.jpg",
-			src: "https://soundcloud.com/noisesymphony/a-glimmer-of-light?in=yourparadis/sets/jazz-hip&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+			src: "./music/song-2.mp3"
 		},
 		{
-			title: "Truly dont care",
-			artist: "Ariose",
+			title: "Halcyon Birds",
+			artist: "Broken Back",
 			img_src: "./img/pic4.jpg",
-			src: "https://soundcloud.com/ariosemusic/again?in=yourparadis/sets/jazz-hip&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+			src: "./music/song-3.mp3"
 		},
 		{
-			title: "Meditate (REEL STREET JAZZ)",
-			artist: "Mujo情",
+			title: "Insane in the Brain",
+			artist: "Cypress Hill",
 			img_src: "./img/pic3.jpg",
-			src: "https://soundcloud.com/mujobeatz/meditate-reel-street-jazz?in=yourparadis/sets/jazz-hip&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+			src: "./music/song-4.mp3"
 		},
 		{
-			title: "Here If You Want (Pale Blue)",
-			artist: "MOSSS",
-			img_src: "./img/pic1.jpg",
-			src: "https://soundcloud.com/mosssmusic/here-if-you-want-pale-blue-2?in=yourparadis/sets/jazz-hip&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
-		},
-		{
-			title: "Sometimes I feel",
-			artist: "Youthgroove",
+			title: "GOOD TIMES PROBLEMZ",
+			artist: "JUNGLE",
 			img_src: "./img/pic2.jpg",
-			src: "https://soundcloud.com/mosssmusic/here-if-you-want-pale-blue-2?in=yourparadis/sets/jazz-hip&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+			src: "./music/song-5.mp3"
 		}
 	])
 
 	const [currentSongIndex, setCurrentSongIndex] = useState(0);
-	const [nextSongIndex, setNextSongIndex] = useState(currentSongIndex + 1);
+	const [nextSongIndex, setNextSongIndex] = useState(0);(currentSongIndex + 1)
 
 	useEffect (() =>{
 		setNextSongIndex(() => {
