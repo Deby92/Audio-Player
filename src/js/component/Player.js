@@ -12,7 +12,7 @@ function Player(props) {
     } else {
       audioEl.current.pause();
     }
-  });
+  },[isPlaying]);
 
   const SkipSong = (forwards = true) => {
     if (forwards) {
