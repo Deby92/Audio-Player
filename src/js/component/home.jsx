@@ -43,12 +43,12 @@ const Home = () => {
 
 	useEffect (() =>{
 		setNextSongIndex(() => {
-			if(currentSongIndex + 1 >songs.length - 1) {
-				return 0;
+			if (currentSongIndex + 1 > songs.length - 1) {
+			  return 0;
 			} else {
-				return currentSongIndex +1;
+				return currentSongIndex + 1;
 			}
-		})
+		});
 	}, [currentSongIndex]);
 	
 	return (

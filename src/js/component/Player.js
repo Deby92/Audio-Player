@@ -24,17 +24,19 @@ function Player(props) {
           temp = 0;
         }
         return temp;
-      })
+      });
     } else {
-      let temp = props.currentSongIndex(() => {
-      temp--;
-      if (temp < 0){
-        temp = props.songs.lenght - 1;
-      }
-      return temp;
+        props.setCurrentSongIndex(() => {
+          let temp = props.currentSongIndex;
+          temp--;
 
-    });
-    }
+          if (temp < 0) {
+              temp = props.songs.lenght - 1;
+          }
+          return temp;
+
+        });
+      }
   }
   return (
     <div className="c-player">
