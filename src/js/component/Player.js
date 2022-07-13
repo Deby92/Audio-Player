@@ -12,7 +12,7 @@ function Player(props) {
     } else {
       audioEl.current.pause();
     }
-  },[isPlaying]);
+  }/* ,[isPlaying] */);
 
   const SkipSong = (forwards = true) => {
     if (forwards) {
@@ -20,7 +20,7 @@ function Player(props) {
         let temp = props.currentSongIndex;
         temp++;
 
-        if (temp > props.songs.lenght - 1) {
+        if (temp > props.songs.length - 1) {
           temp = 0;
         }
         return temp;
@@ -31,13 +31,13 @@ function Player(props) {
           temp--;
 
           if (temp < 0) {
-              temp = props.songs.lenght - 1;
+              temp = props.songs.length - 1;
           }
           return temp;
-
         });
       }
   }
+
   return (
     <div className="c-player">
       <audio src={props.songs[props.currentSongIndex].src} ref={audioEl}></audio>
